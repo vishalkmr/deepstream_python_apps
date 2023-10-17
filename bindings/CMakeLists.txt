@@ -23,9 +23,9 @@ function(check_variable_set variable_name default_value)
 endfunction()
 
 check_variable_set(PYTHON_MAJOR_VERSION 3)
-check_variable_set(PYTHON_MINOR_VERSION 8)
+check_variable_set(PYTHON_MINOR_VERSION 10)
 check_variable_set(PIP_PLATFORM linux_x86_64)
-check_variable_set(DS_PATH "/opt/nvidia/deepstream/deepstream")
+check_variable_set(DS_PATH "/opt/nvidia/deepstream/deepstream-6.4")
 
 
 # Checking values are allowed
@@ -36,7 +36,7 @@ macro(check_variable_allowed var_name var_list)
 endmacro()
 set(PYTHON_MAJVERS_ALLOWED 3)
 check_variable_allowed(PYTHON_MAJOR_VERSION PYTHON_MAJVERS_ALLOWED)
-set(PYTHON_MINVERS_ALLOWED 6 8)
+set(PYTHON_MINVERS_ALLOWED 6 8 9 10)
 check_variable_allowed(PYTHON_MINOR_VERSION PYTHON_MINVERS_ALLOWED)
 set(PIP_PLATFORM_ALLOWED linux_x86_64 linux_aarch64)
 check_variable_allowed(PIP_PLATFORM PIP_PLATFORM_ALLOWED)
